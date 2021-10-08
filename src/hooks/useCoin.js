@@ -28,7 +28,11 @@ const useCoin = (label, initState, options) => {
   const SelectCoin = () => (
     <>
       <Label>{label}</Label>
-      <Select onChange={(e) => updateState(e.target.value)} value={state}>
+      <Select
+        onChange={(e) => updateState(e.target.value)}
+        value={state}
+        data-testid="select-monedas"
+      >
         <option value="">-- Seleccione --</option>
         {options.map((option) => (
           <option key={option.code} value={option.code}>

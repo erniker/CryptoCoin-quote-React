@@ -79,7 +79,7 @@ const Form = ({ setCoin, setCryptoCoin }) => {
       {error ? <Error message="Todos los campos son obligatorios" /> : null}
       <SelectCoin />
       <SelectCrypto />
-      <Button type="submit" value="Calcular" />{" "}
+      <Button data-testid="submit" type="submit" value="Calcular" />{" "}
     </form>
   );
 };

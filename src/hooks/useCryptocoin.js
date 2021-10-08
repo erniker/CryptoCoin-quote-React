@@ -28,10 +28,18 @@ const useCryptocoin = (label, initState, options) => {
   const SelectCrypto = () => (
     <>
       <Label>{label}</Label>
-      <Select onChange={(e) => updateState(e.target.value)} value={state}>
+      <Select
+        data-testid="select-criptos"
+        onChange={(e) => updateState(e.target.value)}
+        value={state}
+      >
         <option value="">-- Seleccione --</option>
         {options.map((option) => (
-          <option key={option.CoinInfo.Id} value={option.CoinInfo.Internal}>
+          <option
+            data-testid="opcion-cripto"
+            key={option.CoinInfo.Id}
+            value={option.CoinInfo.Internal}
+          >
             {option.CoinInfo.FullName}
           </option>
         ))}
